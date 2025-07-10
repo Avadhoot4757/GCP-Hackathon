@@ -9,6 +9,8 @@ import { Badge } from "@/components/ui/badge"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { ModeToggle } from "@/components/mode-toggle"
 import { LoginDialog } from "@/components/login-dialog"
+import { AuthorityLoginModal } from "@/components/authority-login-modal"
+
 import {
   Search,
   AlertTriangle,
@@ -152,6 +154,7 @@ export default function LandingPage() {
   const [query, setQuery] = useState("")
   const [isLoginOpen, setIsLoginOpen] = useState(false)
   const [currentLocation, setCurrentLocation] = useState("Koramangala, Bengaluru")
+  const [isAuthorityLoginOpen, setIsAuthorityLoginOpen] = useState(false)
   const router = useRouter()
 
   const handleSearch = () => {
@@ -251,6 +254,9 @@ export default function LandingPage() {
             <ModeToggle />
             <Button variant="outline" size="sm" onClick={() => setIsLoginOpen(true)}>
               Login
+            </Button>
+            <Button variant="outline" size="sm" onClick={() => setIsAuthorityLoginOpen(true)}>
+              Authority Login
             </Button>
           </div>
         </div>
@@ -531,6 +537,9 @@ export default function LandingPage() {
       </div>
 
       <LoginDialog open={isLoginOpen} onOpenChange={setIsLoginOpen} />
+      {isAuthorityLoginOpen && (
+        <AuthorityLoginModal onClose={() => setIsAuthorityLoginOpen(false)} />
+      )}
     </div>
   )
 }
