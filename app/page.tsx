@@ -225,7 +225,7 @@ export default function LandingPage() {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <span className="text-2xl font-extrabold text-primary tracking-wide flex items-center">
-              <span className="mr-2">📡</span> Namma Bengaluru
+              <span className="mr-2">📡</span> Velora
             </span>
           </div>
 

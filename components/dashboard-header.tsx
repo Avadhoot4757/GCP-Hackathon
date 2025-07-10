@@ -44,7 +44,7 @@ export function DashboardHeader({ onBack, showReportIssue = true }: DashboardHea
             </Button>
           )}
           <span className="text-2xl font-extrabold text-primary tracking-wide flex items-center">
-            <span className="mr-2">📡</span> Namma Bengaluru
+            <span className="mr-2">📡</span> Velora
           </span>
         </div>
 
